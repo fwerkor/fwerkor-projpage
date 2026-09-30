@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="FWERKOR projects: research systems and open-source software."><meta name="theme-color" content="#0c0f13"><title>Projects — FWERKOR</title><link rel="icon" type="image/png" href="/assets/fwerkor-logo.png"><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><script src="/main.js" defer></script></head><body><header class="site-header">
+  <a class="brand" href="/"><img src="/assets/fwerkor-logo.png" alt=""><span>FWERKOR</span><span class="brand-sub">/ PROJECTS</span></a>
+  <nav class="nav"><a href="/#projects">项目</a><a href="https://blog.fwerkor.com/">Blog</a><a href="https://github.com/fwerkor" target="_blank" rel="noreferrer">GitHub</a></nav>
+  <div class="header-actions"><button class="theme-toggle" data-theme-toggle aria-label="切换显示模式"><span class="theme-glyph"></span></button><a class="header-home" href="https://www.fwerkor.com/">Home</a></div>
+</header><main>
+<section class="index-hero"><div class="hero-grid" aria-hidden="true"></div><div class="shell"><p class="index-kicker">FWERKOR / PROJECTS</p><h1 class="index-title">Projects</h1><p class="index-copy">研究系统、基础设施与开源软件。这里汇总 FWERKOR 当前主要项目，以及对应的论文、源码、Demo 和项目站点。</p><div class="hero-meta"><span class="meta-pill">04 projects</span><span class="meta-pill">Research + Systems</span><span class="meta-pill">Open source</span></div></div></section>
+<section class="project-index shell" id="projects"><div class="section-head reveal"><div><p class="section-label">PROJECT INDEX</p><h2>当前项目</h2></div></div><div class="project-list"><a class="project-card reveal" data-project="cid" href="/cid/">
+      <div class="project-copy">
+        <div class="project-topline"><span class="project-kind">DIFFUSION RUNTIME</span><span class="project-number">01</span></div>
+        <div><h3>CID</h3><p class="project-summary">Continuous Interaction Diffusion 面向扩散语言模型的异步工具增强推理。它把事实、思考和最终显示拆成相互协同的状态通道，让外部信息可以在去噪仍在进行时并行获取，并在返回后持续修正中间认知和最终输出。项目同时包含模型接口、运行时、训练数据结构和评测工具，当前公开工作重点是只读工具与异步感知绑定。</p><div class="project-action">查看项目 →</div></div>
+      </div>
+      <div class="project-visual cid-visual" aria-hidden="true"><div class="channel" data-label="FACTS"><i></i></div><div class="channel" data-label="THOUGHT"><i></i></div><div class="channel" data-label="DISPLAY"><i></i></div></div>
+    </a><a class="project-card reveal" data-project="argosfs" href="/argosfs/">
+      <div class="project-copy">
+        <div class="project-topline"><span class="project-kind">FILESYSTEM</span><span class="project-number">02</span></div>
+        <div><h3>ArgosFS</h3><p class="project-summary">ArgosFS 是一个以 Rust 实现的自驱动纠删码文件系统，面向本地异构磁盘、根文件系统和长期运行场景。它提供 FUSE 前端、原始块设备与 loop 后端、Reed–Solomon 冗余、校验、修复、压缩、加密和磁盘健康感知，并通过 autopilot 将巡检、重平衡和部分维护流程自动化。项目也包含与 CapOS rootfs 的集成路径。</p><div class="project-action">查看项目 →</div></div>
+      </div>
+      <div class="project-visual argosfs-visual" aria-hidden="true"><div class="disk"></div><div class="disk"></div><div class="disk"></div><div class="disk"></div><div class="rail a"></div><div class="rail b"></div></div>
+    </a><a class="project-card reveal" data-project="capos" href="/capos/">
+      <div class="project-copy">
+        <div class="project-topline"><span class="project-kind">SERVER OS</span><span class="project-number">03</span></div>
+        <div><h3>CapOS</h3><p class="project-summary">CapOS 是基于 OpenWrt 技术栈构建的开源服务器操作系统，目标是把轻量系统、浏览器管理界面和常见服务部署整合到同一套环境中。系统覆盖网络、存储、应用管理与 WebDesktop，并支持从小型设备到通用 x86/ARM 服务器的部署。当前工程也在推进 Snap 应用集成、OCI 系统镜像与 ArgosFS 根文件系统路径。</p><div class="project-action">查看项目 →</div></div>
+      </div>
+      <div class="project-visual capos-visual" aria-hidden="true"><div class="desktop"></div></div>
+    </a><a class="project-card reveal" data-project="cachereforge" href="/cachereforge/">
+      <div class="project-copy">
+        <div class="project-topline"><span class="project-kind">LLM SYSTEMS</span><span class="project-number">04</span></div>
+        <div><h3>CacheReforge</h3><p class="project-summary">CacheReforge 研究持续更新轻量适配器时的陈旧 KV Cache 恢复问题。它把缓存表示成逐层混合版本对象，并结合适配器锚点、敏感度、累计漂移和可执行重启边界，在直接复用、有限重算与完整后缀恢复之间选择。公开论文在持续 LoRA 更新、长上下文 HotpotQA 与 2WikiMQA 工作负载上评估了这种有界恢复机制。</p><div class="project-action">查看项目 →</div></div>
+      </div>
+      <div class="project-visual cache-visual" aria-hidden="true"><div class="layer"></div><div class="layer"></div><div class="layer"></div><div class="layer"></div><div class="restart"></div></div>
+    </a></div></section>
+</main><footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><img src="/assets/fwerkor-logo.png" alt=""><span>FWERKOR</span></div><div class="footer-links"><span>© <span data-year>2026</span> FWERKOR</span><a href="https://github.com/fwerkor" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></footer></body></html>
