@@ -1,8 +1,187 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0f13"><title>CapOS — FWERKOR Projects</title><link rel="icon" type="image/png" href="/assets/fwerkor-logo.png"><script src="/theme-init.js"></script><link rel="stylesheet" href="/styles.css"><script src="/main.js" defer></script></head><body><header class="site-header">
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="CapOS — FWERKOR open-source server operating system project.">
+  <meta name="theme-color" content="#0c0f13">
+  <title>CapOS — FWERKOR Projects</title>
+  <link rel="icon" type="image/png" href="/assets/fwerkor-logo.png">
+  <script src="/theme-init.js"></script>
+  <link rel="stylesheet" href="/styles.css?v=1.0.2">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+<header class="site-header">
   <a class="brand" href="/"><img src="/assets/fwerkor-logo.png" alt=""><span>FWERKOR</span><span class="brand-sub">/ PROJECTS</span></a>
   <nav class="nav"><a href="/#projects">项目</a><a href="https://blog.fwerkor.com/">Blog</a><a href="https://github.com/fwerkor" target="_blank" rel="noreferrer">GitHub</a></nav>
   <div class="header-actions"><button class="theme-toggle" data-theme-toggle aria-label="切换显示模式"><span class="theme-glyph"></span></button><a class="header-home" href="https://www.fwerkor.com/">Home</a></div>
-</header><main class="detail-page" data-project="capos">
-<section class="detail-hero"><div class="shell detail-hero-inner"><a class="back-link" href="/">← 返回项目</a><p class="detail-kicker">SERVER OS</p><h1 class="detail-title">CapOS</h1><p class="detail-subtitle">基于 OpenWrt 技术栈的开源服务器操作系统，提供浏览器管理界面、应用运行环境和跨架构部署能力。</p><div class="resource-row"><a class="resource-link primary" href="https://capos.top/" target="_blank" rel="noreferrer">Website ↗</a><a class="resource-link" href="https://github.com/fwerkor/CapOS" target="_blank" rel="noreferrer">GitHub ↗</a><a class="resource-link" href="https://github.com/fwerkor/CapOS/releases" target="_blank" rel="noreferrer">Releases ↗</a></div></div></section>
-<section class="detail-body shell"><div class="fact-grid"><div class="fact"><span class="fact-label">Base</span><span class="fact-value">OpenWrt</span></div><div class="fact"><span class="fact-label">UI</span><span class="fact-value">WebDesktop</span></div><div class="fact"><span class="fact-label">Apps</span><span class="fact-value">Snap integration</span></div><div class="fact"><span class="fact-label">License</span><span class="fact-value">GPL-2.0</span></div></div><div class="content-grid"><aside class="content-nav"><p class="section-label">PROJECT NOTES</p><h2>项目概览</h2></aside><div class="prose"><section class="prose-section reveal"><h3>系统定位</h3><p>CapOS 将 OpenWrt 的轻量系统基础扩展为面向服务器的完整环境，覆盖网络、存储、远程管理、应用生命周期和浏览器端 WebDesktop。</p><div class="feature-list"><div class="feature"><strong>Lightweight base</strong><span>保留小型设备和边缘环境需要的低资源占用。</span></div><div class="feature"><strong>Web management</strong><span>常见系统操作和应用入口集中到浏览器界面。</span></div></div></section><section class="prose-section reveal"><h3>应用与兼容</h3><p>系统组件继续由 CapOS/OpenWrt 包体系管理，用户应用通过 Snap 生态安装；systemd-on-procd 提供常见 systemd 命令与 unit 边界兼容。</p><div class="feature-list"><div class="feature"><strong>Snap Store</strong><span>面向通用 Linux 应用生态。</span></div><div class="feature"><strong>Web discovery</strong><span>自动发现并接入应用暴露的 Web 服务。</span></div></div></section><section class="prose-section reveal"><h3>部署路径</h3><p>项目覆盖多架构固件、OCI 系统镜像以及与 ArgosFS 的根文件系统集成。GitHub Releases 和项目官网提供公开下载与文档入口。</p></section><div class="architecture capos-arch" aria-hidden="true"><span class="arch-label">SYSTEM VIEW</span><div class="frame"></div><div class="pane p1"></div><div class="pane p2"></div></div></div></div></section>
-</main><footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><img src="/assets/fwerkor-logo.png" alt=""><span>FWERKOR</span></div><div class="footer-links"><span>© <span data-year>2026</span> FWERKOR</span><a href="https://github.com/fwerkor" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></footer></body></html>
+</header>
+
+<main class="detail-page capos-page" data-project="capos">
+  <section class="detail-hero capos-detail-hero">
+    <div class="shell capos-hero-grid">
+      <div class="capos-hero-copy">
+        <a class="back-link" href="/">← 返回项目</a>
+        <p class="detail-kicker">SERVER OS</p>
+        <h1 class="detail-title">CapOS</h1>
+        <p class="detail-subtitle">基于 OpenWrt 技术栈的开源服务器操作系统。系统组件由 CapOS / OpenWrt 包体系管理，用户应用通过 Snap 运行，并由 WebDesktop 提供浏览器端管理入口。</p>
+        <div class="resource-row">
+          <a class="resource-link primary" href="https://capos.top/" target="_blank" rel="noreferrer">Website ↗</a>
+          <a class="resource-link" href="https://github.com/fwerkor/CapOS/releases" target="_blank" rel="noreferrer">Downloads ↗</a>
+          <a class="resource-link" href="https://repo.capos.top/" target="_blank" rel="noreferrer">Package Repo ↗</a>
+          <a class="resource-link" href="https://github.com/fwerkor/CapOS/wiki" target="_blank" rel="noreferrer">Docs ↗</a>
+          <a class="resource-link" href="https://github.com/fwerkor/CapOS" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="capos-desktop-preview" aria-hidden="true">
+        <div class="capos-preview-bar">
+          <span class="capos-preview-dot"></span>
+          <span class="capos-preview-dot"></span>
+          <span class="capos-preview-dot"></span>
+          <span class="capos-preview-title">WebDesktop</span>
+        </div>
+        <div class="capos-preview-main">
+          <aside class="capos-preview-dock">
+            <i></i><i></i><i></i><i></i>
+          </aside>
+          <div class="capos-preview-workspace">
+            <div class="capos-preview-card card-status">
+              <small>SYSTEM</small>
+              <strong>CapOS</strong>
+              <span>OpenWrt base</span>
+            </div>
+            <div class="capos-preview-card card-apps">
+              <small>APPLICATIONS</small>
+              <strong>Snap Store</strong>
+              <span>Install / update / remove</span>
+            </div>
+            <div class="capos-preview-card card-network">
+              <small>NETWORK</small>
+              <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-body shell capos-detail-body">
+    <div class="fact-grid capos-facts">
+      <div class="fact"><span class="fact-label">Base</span><span class="fact-value">OpenWrt</span></div>
+      <div class="fact"><span class="fact-label">PID 1</span><span class="fact-value">procd</span></div>
+      <div class="fact"><span class="fact-label">Applications</span><span class="fact-value">Snap Store</span></div>
+      <div class="fact"><span class="fact-label">License</span><span class="fact-value">GPL-2.0</span></div>
+    </div>
+
+    <section class="capos-intro reveal">
+      <div>
+        <p class="section-label">SYSTEM MODEL</p>
+        <h2>系统组件和用户应用分开管理。</h2>
+      </div>
+      <p>CapOS 自己的内核、驱动、网络、存储、WebDesktop 和 snapd 等系统组件继续由 CapOS / OpenWrt 包体系维护；用户应用直接来自官方 Snap Store。这样不需要再维护一套 CapOS 专用的第三方应用仓库。</p>
+    </section>
+
+    <section class="capos-stack reveal" aria-label="CapOS system stack">
+      <div class="capos-stack-row stack-ui">
+        <span class="stack-index">04</span>
+        <div><strong>WebDesktop</strong><small>浏览器管理、应用操作、Web 服务入口</small></div>
+        <b>UI</b>
+      </div>
+      <div class="capos-stack-row stack-apps">
+        <span class="stack-index">03</span>
+        <div><strong>Snap applications</strong><small>来自官方 Snap Store 的用户应用</small></div>
+        <b>APPS</b>
+      </div>
+      <div class="capos-stack-row stack-system">
+        <span class="stack-index">02</span>
+        <div><strong>CapOS system</strong><small>OpenWrt packages · snapd · systemd-on-procd</small></div>
+        <b>SYSTEM</b>
+      </div>
+      <div class="capos-stack-row stack-storage">
+        <span class="stack-index">01</span>
+        <div><strong>Kernel / storage / hardware</strong><small>多架构固件、块设备与 ArgosFS rootfs 路径</small></div>
+        <b>BASE</b>
+      </div>
+    </section>
+
+    <section class="capos-bento">
+      <article class="capos-panel panel-web reveal">
+        <div class="panel-heading"><span>01</span><p>WEBDESKTOP</p></div>
+        <h3>浏览器端管理</h3>
+        <p>WebDesktop 负责系统管理与应用入口。它通过 <code>/run/snapd.socket</code> 与 snapd 通信，可执行应用安装、更新和移除，并自动发现 Snap 暴露的 Web 服务。</p>
+        <div class="panel-window" aria-hidden="true">
+          <div class="panel-window-bar"></div>
+          <div class="panel-window-grid"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </article>
+
+      <article class="capos-panel panel-apps reveal">
+        <div class="panel-heading"><span>02</span><p>APPLICATION MODEL</p></div>
+        <h3>不维护平行应用生态</h3>
+        <p>第三方应用不需要重新打包成 CapOS 专用格式。用户应用由 Snap 安装，CapOS 只维护系统层和应用运行所需的基础能力。</p>
+        <div class="app-flow" aria-hidden="true">
+          <span>Snap Store</span><i></i><span>snapd</span><i></i><span>WebDesktop</span>
+        </div>
+      </article>
+
+      <article class="capos-panel panel-compat reveal">
+        <div class="panel-heading"><span>03</span><p>COMPATIBILITY</p></div>
+        <h3>systemd-on-procd</h3>
+        <p>CapOS 保持 procd 作为 PID 1，同时通过 systemd-on-procd 提供常见的 systemd 命令与 unit 边界，让更多面向 systemd 的软件可以进入现有服务模型。</p>
+        <div class="compat-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+
+      <article class="capos-panel panel-rootfs reveal">
+        <div class="panel-heading"><span>04</span><p>ROOT FILESYSTEM</p></div>
+        <h3>ArgosFS 路径</h3>
+        <p>常规固件构建继续支持 ArgosFS 根文件系统路径；项目也提供独立的 OCI 系统镜像构建，用于需要标准容器镜像布局的场景。</p>
+        <div class="rootfs-layers" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+    </section>
+
+    <section class="capos-deployment">
+      <div class="capos-deployment-head reveal">
+        <p class="section-label">DEPLOYMENT</p>
+        <h2>两条构建路径</h2>
+      </div>
+      <div class="deployment-grid">
+        <article class="deployment-card reveal">
+          <span class="deployment-tag">FIRMWARE</span>
+          <h3>设备固件</h3>
+          <p>通过标准 CapOS / OpenWrt 构建流程选择目标平台、工具链与系统组件，生成对应设备的系统镜像。</p>
+          <code>make menuconfig<br>make</code>
+        </article>
+        <article class="deployment-card reveal">
+          <span class="deployment-tag">OCI</span>
+          <h3>系统容器镜像</h3>
+          <p>OCI 构建使用独立的 tar rootfs profile，输出标准 OCI Image Layout，以 <code>/sbin/init</code> 作为入口。</p>
+          <code>make capos-oci</code>
+        </article>
+      </div>
+    </section>
+
+    <section class="capos-reference reveal">
+      <div>
+        <p class="section-label">QUICK REFERENCE</p>
+        <h2>默认入口</h2>
+      </div>
+      <div class="reference-list">
+        <div><span>WebDesktop</span><strong>2000/tcp · 2020/tcp</strong></div>
+        <div><span>Remote access</span><strong>SSH 22/tcp</strong></div>
+        <div><span>Network</span><strong>DHCP · DHCPv6</strong></div>
+        <div><span>Package repo</span><strong>repo.capos.top</strong></div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-brand"><img src="/assets/fwerkor-logo.png" alt=""><span>FWERKOR</span></div>
+    <div class="footer-links"><span>© <span data-year>2026</span> FWERKOR</span><a href="https://github.com/fwerkor" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+  </div>
+</footer>
+</body>
+</html>
